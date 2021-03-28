@@ -1,0 +1,10 @@
+{
+  "ldap": {
+    "url": "ldap.local",
+    "bindDn": "CN=user,OU=branch,DC=systemb,DC=gpe",
+    "bindCredentials": "secret_password",
+    "searchBase": "DC=contoso,DC=local",
+    "searchFilter": "(&(objectClass=user)(objectClass=person)(sAMAccountName={0}))",
+    "adminCn": "CN=Admins,OU=branch,DC=contoso,DC=local"
+  }
+}

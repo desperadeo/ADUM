@@ -1,0 +1,33 @@
+﻿@model Token
+
+<form asp-controller="Add" asp-action="Add" method="Post" class="col-12 form-horizontal" role="form">
+    <div asp-validation-summary="All" class="text-danger"></div>
+
+    <div class="form-group">
+        <label asp-for="SamAccountName" class="col-md-2 control-label"></label>
+        <div class="col-md-5">
+            <input asp-for="SamAccountName" class="form-control" />
+            <span asp-validation-for="SamAccountName" class="text-danger"></span>
+        </div>
+    </div>
+    <div class="form-group">
+        <label asp-for="ADGroup" class="col-md-2 control-label"></label>
+        <div class="col-md-5">
+            <input asp-for="ADGroup" class="form-control" />
+            <span asp-validation-for="ADGroup" class="text-danger"></span>
+        </div>
+    </div>
+    <!--
+    <div class="form-group">
+        <label asp-for="Status" class="select"></label>
+        <div class="col-md-5">
+            <select asp-for="Status" asp-items="StatusViewModel.Status"></select>
+        </div>
+    </div>
+    -->
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-5">
+            <input type="submit" class="btn btn-primary" value="Add Token" />
+        </div>
+    </div>
+</form>

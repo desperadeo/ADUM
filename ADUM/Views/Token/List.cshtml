@@ -1,0 +1,29 @@
+﻿@model TokenListViewModel
+
+
+<h4>Liste des autorisations d'acces courantes</h4>
+<br />
+<table border="1">
+    <tr>
+        <td width="20"><b>ID</b></td>
+        <td width="150" align="center"><b>SamAccountName</b></td>
+        <td width="150" align="center"><b>ADGroup</b></td>
+        <td width="200" align="center"><b>StartTime</b></td>
+        <td width="200" align="center"><b>ExpiredTime</b></td>
+        <td width="20"><b>Status</b></td>
+    </tr>
+       @foreach (var token in Model.Tokens)
+    {
+        @if (@token.Status == 1)
+        {
+            <tr>
+                <td>@token.Id</td>
+                <td>@token.SamAccountName</td>
+                <td>@token.ADGroup</td>
+                <td>@token.StartTime</td>
+                <td>@token.ExpiredTime</td>
+                <td>@token.Status</td>
+            </tr>
+        };
+    }
+</table>
